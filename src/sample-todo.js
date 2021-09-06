@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-
 const App = () => {
   const [todos, setTodo] = useState([]);
+
   const [task, setTask] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     setTodo((todos) => [...todos, { task }]);
   };
 
